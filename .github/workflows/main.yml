@@ -18,7 +18,7 @@ jobs:
           python-version: '3.11'
 
       - name: Run script
-        run: python .src/demo/_init_.py
+        run: python .src/demo/__init__.py
 
       - name: Commit add push changes
         uses: stefanzweifel/git-auto-commit-action@v7
