@@ -1,0 +1,27 @@
+name: Calculator-CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run script
+        run: python ./src/demo/__init__.py
+
+      - name: Commit add push changes
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit-message: Update calculator
+            
