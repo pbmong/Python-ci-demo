@@ -18,4 +18,3 @@ def dividir(a: float, b: float) -> float:
         raise ValueError("No se puede dividir entre cero")
     return a / b
 
-print("Hey I´m a calculator!")
